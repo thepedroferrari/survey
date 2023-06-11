@@ -119,11 +119,6 @@ export const loader = async ({ params }: DataFunctionArgs) => {
     if (data.survey_by_pk) {
       return json(
         { survey: data.survey_by_pk, loading: false },
-        {
-          headers: {
-            "Cache-Control": `private, max-age=${300}`, // 5 minutes
-          },
-        }
       );
     } else {
       throw new Error("Survey not found");
