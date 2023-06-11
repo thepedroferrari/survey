@@ -1,0 +1,9 @@
+schema: https://enveritas-interview.hasura.app/v1/graphql
+generates:
+  app/graphql/generated.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withHooks: true
